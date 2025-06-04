@@ -1,19 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
+    <title>Carrinho Simples</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-
 <body>
     <div class="container">
+        <div class="bloco" id="catalogo-bloco">
+            <div class="titulo">
+                <h1>CATALOGO</h1>
+                <span class="material-icons">store</span>
+            </div>
+            
+            <div id="lista-produtos">
+                <div class="produto-item" data-id="1" data-nome="Camiseta Básica" data-preco="29.90">
+                    <p class="produto-nome">Camiseta</p>
+                    <p class="produto-preco">R$ 29.90</p>
+                    <p class="produto-estoque">Estoque: <span class="estoque-qtd">5</span></p>
+                    <button class="btn add-btn">Adicionar</button>
+                </div>
+                <div class="produto-item" data-id="2" data-nome="Bermuda Jeans" data-preco="79.50">
+                    <p class="produto-nome">Shorts</p>
+                    <p class="produto-preco">R$ 79.50</p>
+                    <p class="produto-estoque">Estoque: <span class="estoque-qtd">3</span></p>
+                    <button class="btn add-btn">Adicionar</button>
+                </div>
+                <div class="produto-item" data-id="3" data-nome="Boné Preto" data-preco="19.99">
+                    <p class="produto-nome">Meias</p>
+                    <p class="produto-preco">R$ 19.99</p>
+                    <p class="produto-estoque">Estoque: <span class="estoque-qtd">8</span></p>
+                    <button class="btn add-btn">Adicionar</button>
+                </div>
+            </div>
+        </div>
 
+        <div class="bloco" id="carrinho-bloco">
+            <div class="titulo">
+                <h1>CARRINHO</h1>
+                <span class="material-icons">shopping_cart</span>
+            </div>
+            <div id="lista-carrinho">
+                <p class="carrinho-status">Seu carrinho está vazio.</p>
+            </div>
+            <div class="total-carrinho">
+                <strong>Total: R$ <span id="carrinho-total-valor">0.00</span></strong>
+            </div>
+        </div>
     </div>
-</body>
 
+    <script src="script.js"></script>
+</body>
 </html>

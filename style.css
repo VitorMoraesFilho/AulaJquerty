@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    margin: 0;
+    background-color: #f0f2f5;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.bloco {
+    flex: 1;
+    max-width: 550px;
+    background-color: #ffffff;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.5px;
+    border-radius: 12px;
+    padding: 25px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 15px;
+}
+
+.titulo h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #2c3e50;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.material-icons {
+    font-size: 38px;
+    color: #2c3e50;
+}
+
+#lista-produtos,
+#lista-carrinho {
+    flex-grow: 1;
+}
+
+#lista-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.produto-item {
+    background-color: #fcfcfc;
+    border: 1px solid #e9e9e9;
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 0;
+    flex: 1 1 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (max-width: 768px) {
+    .produto-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+.produto-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.produto-item p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.produto-item .produto-nome {
+    font-weight: 700;
+    font-size: 18px;
+    color: #34495e;
+}
+
+.produto-item .produto-preco {
+    font-weight: bold;
+    color: #28a745;
+    font-size: 17px;
+}
+
+.produto-item .produto-estoque {
+    font-size: 15px;
+    color: #777;
+}
+
+.produto-item .estoque-qtd {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.add-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.add-btn:disabled {
+    background-color: #cccccc;
+    color: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+.item-no-carrinho {
+    background-color: #fefefe;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+}
+
+.item-no-carrinho p {
+    margin: 0;
+    flex-grow: 1;
+    color: #444;
+}
+
+.item-no-carrinho .qtd-val {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.remove-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.remove-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.carrinho-status {
+    text-align: center;
+    color: #7f8c8d;
+    font-family: 'Bebas Neue', sans-serif;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.total-carrinho {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid #e0e0e0;
+    text-align: right;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    color: #2c3e50;
+}
+
+.total-carrinho strong {
+    color: #1a1a1a;
+}
+
+#carrinho-total-valor {
+    color: #28a745;
+    font-size: 30px;
+    font-weight: bold;
+}
