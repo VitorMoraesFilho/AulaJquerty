@@ -60,6 +60,7 @@ body {
 
 #lista-produtos,
 #lista-carrinho {
+    align-content: center;
     flex-grow: 1;
 }
 
